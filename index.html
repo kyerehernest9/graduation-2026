@@ -1,472 +1,1239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Graduation 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rachel's Graduation | Class of 2026</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
+    :root {
+      --coffee-dark: #3b2a22;
+      --coffee: #5a4034;
+      --coffee-light: #7a5b49;
+
+      --beige: #e8dccb;
+      --beige-light: #f4ede3;
+      --cream: #fbf7f1;
+
+      --caramel: #b99573;
+      --white: #ffffff;
+      --text: #3d342e;
+    }
+
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #f9f6ef;
-      color: #171717;
-      line-height: 1.6;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    h1, h2, h3 {
+
+    h1, h2, h3, h4 {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
     }
 
-    /* NAVIGATION */
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+
+
+    /* ==============================
+       NAVIGATION
+    ============================== */
+
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(8px);
-      padding: 14px 5%;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
+      background: rgba(59, 42, 34, 0.92);
+      backdrop-filter: blur(10px);
 
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 100px 20px 40px;
-      color: white;
-      background:
-        linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.65)),
-        linear-gradient(135deg, #1b1b1b, #4c4437);
+      gap: 28px;
+
+      padding: 16px 5%;
     }
+
+
+    nav a {
+      color: var(--beige-light);
+      text-decoration: none;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+
+      transition: 0.3s;
+    }
+
+
+    nav a:hover {
+      color: #d5b89c;
+    }
+
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 110px 20px 60px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(53, 37, 29, 0.48),
+          rgba(53, 37, 29, 0.70)
+        ),
+        url("images/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
 
     .hero-content {
       max-width: 900px;
     }
 
-    .small-title {
-      letter-spacing: 7px;
+
+    .hero-small {
       text-transform: uppercase;
-      font-size: 14px;
-      margin-bottom: 20px;
-      color: #e6cf84;
+      letter-spacing: 7px;
+      font-size: 13px;
+
+      margin-bottom: 22px;
+
+      color: #e5d2bd;
     }
+
 
     .hero h1 {
-      font-size: clamp(70px, 13vw, 150px);
-      line-height: 0.85;
-      letter-spacing: 3px;
-      margin-bottom: 25px;
+      font-size: clamp(65px, 12vw, 145px);
+      line-height: 0.8;
+
+      font-weight: 600;
+
+      margin-bottom: 28px;
     }
 
-    .class-year {
-      font-size: 18px;
+
+    .hero-year {
+      font-size: 15px;
+
+      letter-spacing: 8px;
       text-transform: uppercase;
-      letter-spacing: 7px;
-      color: #e6cf84;
+
       margin-bottom: 25px;
+
+      color: #ead7c4;
     }
 
-    .degree {
-      font-size: 17px;
+
+    .hero-degree {
+      font-size: 18px;
       margin-bottom: 5px;
     }
 
-    .university {
-      font-size: 14px;
-      opacity: 0.8;
+
+    .hero-university {
+      font-size: 13px;
+      letter-spacing: 2px;
+
+      opacity: 0.9;
+
       margin-bottom: 35px;
     }
 
-    .quote {
+
+    .hero-quote {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 25px;
+
+      font-size: clamp(23px, 3vw, 31px);
       font-style: italic;
-      margin-bottom: 35px;
+
+      max-width: 650px;
+      margin: 0 auto 38px;
     }
 
-    .btn {
+
+    .hero-button {
       display: inline-block;
-      padding: 14px 28px;
-      border: 1px solid #d4af37;
+
+      padding: 14px 32px;
+
+      border: 1px solid #e0c7ad;
+
       color: white;
+
       text-decoration: none;
+
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 12px;
+
+      font-size: 11px;
+
       transition: 0.3s;
     }
 
-    .btn:hover {
-      background: #d4af37;
-      color: black;
+
+    .hero-button:hover {
+      background: var(--beige-light);
+      color: var(--coffee-dark);
     }
 
-    /* GENERAL SECTIONS */
+
+
+    /* ==============================
+       GENERAL SECTIONS
+    ============================== */
+
     section {
-      padding: 90px 8%;
+      padding: 100px 8%;
     }
 
-    .section-title {
+
+    .section-heading {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 800px;
+
+      margin: 0 auto 55px;
     }
 
-    .section-title span {
-      color: #a88725;
+
+    .section-heading span {
       text-transform: uppercase;
+
       letter-spacing: 4px;
-      font-size: 12px;
-    }
 
-    .section-title h2 {
-      font-size: clamp(42px, 7vw, 70px);
-      margin-top: 5px;
-    }
+      color: var(--coffee-light);
 
-    /* COUNTDOWN */
-    .countdown-section {
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .countdown {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .count-box {
-      width: 150px;
-      padding: 25px 10px;
-      border: 1px solid rgba(212,175,55,0.5);
-    }
-
-    .count-box span {
-      display: block;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 55px;
-      color: #d4af37;
-    }
-
-    .count-box p {
-      text-transform: uppercase;
-      letter-spacing: 2px;
       font-size: 11px;
     }
 
-    /* EVENT DETAILS */
-    .event-card {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 55px 30px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    .section-heading h2 {
+      font-size: clamp(45px, 6vw, 70px);
+
+      color: var(--coffee-dark);
+
+      margin-top: 8px;
+
+      line-height: 1;
     }
 
+
+    .section-heading p {
+      max-width: 650px;
+
+      margin: 20px auto 0;
+
+      font-size: 14px;
+
+      color: #6e625b;
+    }
+
+
+
+    /* ==============================
+       COUNTDOWN / DATE ANNOUNCEMENT
+    ============================== */
+
+    .countdown-section {
+      background: var(--coffee-dark);
+      color: white;
+
+      text-align: center;
+    }
+
+
+    .countdown-section .section-heading h2 {
+      color: white;
+    }
+
+
+    .countdown-section .section-heading span {
+      color: #d9c2aa;
+    }
+
+
+    .date-announcement {
+      max-width: 700px;
+      margin: auto;
+
+      border: 1px solid rgba(232, 220, 203, 0.35);
+
+      padding: 45px 30px;
+
+      background: rgba(255,255,255,0.03);
+    }
+
+
+    .date-announcement p {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(30px, 5vw, 50px);
+
+      color: #dfc6ad;
+
+      line-height: 1.2;
+    }
+
+
+    .date-announcement span {
+      display: block;
+
+      margin-top: 14px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-size: 10px;
+
+      color: #efe3d7;
+    }
+
+
+
+    /* ==============================
+       CEREMONY
+    ============================== */
+
+    .ceremony {
+      background: var(--beige-light);
+    }
+
+
+    .event-card {
+      max-width: 850px;
+
+      margin: auto;
+
+      padding: 65px 45px;
+
+      text-align: center;
+
+      background: var(--cream);
+
+      border: 1px solid #ddcebd;
+
+      box-shadow: 0 20px 50px rgba(59, 42, 34, 0.08);
+    }
+
+
+    .event-icon {
+      font-size: 35px;
+
+      margin-bottom: 10px;
+    }
+
+
     .event-card h3 {
-      font-size: 40px;
+      font-size: 45px;
+
+      color: var(--coffee-dark);
+
       margin-bottom: 20px;
     }
+
+
+    .event-date {
+      color: var(--coffee-light);
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
 
     .event-card p {
       margin: 8px 0;
     }
 
-    .gold {
-      color: #a88725;
-      font-weight: 600;
-    }
 
-    /* JOURNEY */
-    .journey {
-      background: #eee9de;
-    }
+    .ceremony-message {
+      max-width: 600px;
 
-    .timeline {
-      max-width: 800px;
-      margin: auto;
-    }
+      margin: 28px auto 0 !important;
 
-    .timeline-item {
-      border-left: 2px solid #c3a13e;
-      padding: 5px 0 35px 30px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: '';
-      width: 13px;
-      height: 13px;
-      background: #c3a13e;
-      border-radius: 50%;
-      position: absolute;
-      left: -7px;
-      top: 10px;
-    }
-
-    .timeline-item h3 {
-      font-size: 30px;
-    }
-
-    .timeline-item p {
-      color: #555;
-    }
-
-    /* MESSAGE */
-    .message {
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .message p {
       font-family: 'Cormorant Garamond', serif;
+
+      font-size: 21px;
+
+      font-style: italic;
+    }
+
+
+
+    /* ==============================
+       STORY
+    ============================== */
+
+    .story {
+      background: var(--cream);
+    }
+
+
+    .story-grid {
+      max-width: 1150px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+
+    .story-image img {
+      height: 650px;
+
+      object-fit: cover;
+    }
+
+
+    .story-text h3 {
+      font-size: 48px;
+
+      color: var(--coffee-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .story-text p {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+    }
+
+
+    .highlight {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 26px !important;
+
+      color: var(--coffee-light);
+
+      border-left: 2px solid var(--caramel);
+
+      padding-left: 22px;
+
+      margin: 30px 0 !important;
+    }
+
+
+
+    /* ==============================
+       INTO THE LAB
+    ============================== */
+
+    .research {
+      background: var(--beige);
+    }
+
+
+    .research-grid {
+      max-width: 1150px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    .research-images {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+    }
+
+
+    .research-images img {
+      height: 260px;
+
+      object-fit: cover;
+    }
+
+
+    .research-images img:first-child {
+      grid-column: 1 / 3;
+
+      height: 390px;
+    }
+
+
+    .research-text h3 {
+      font-size: 50px;
+
+      color: var(--coffee-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .research-text p {
+      margin-bottom: 18px;
+    }
+
+
+    .research-name {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 24px;
+
+      color: var(--coffee-dark);
+
+      font-style: italic;
+
+      margin: 28px 0;
+    }
+
+
+
+    /* ==============================
+       THESIS / EXPERIMENT
+    ============================== */
+
+    .experiment {
+      background: var(--coffee-dark);
+
+      color: #f3eade;
+    }
+
+
+    .experiment-grid {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+
+    .experiment img {
+      height: 580px;
+
+      object-fit: cover;
+    }
+
+
+    .experiment h3 {
+      color: white;
+
+      font-size: 49px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .experiment p {
+      margin-bottom: 18px;
+
+      color: #e5d9cc;
+    }
+
+
+    .experiment-label {
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-size: 10px;
+
+      color: #d3b99f;
+
+      margin-bottom: 15px !important;
+    }
+
+
+
+    /* ==============================
+       FOOD SAFETY
+    ============================== */
+
+    .food-safety {
+      background: var(--beige-light);
+    }
+
+
+    .food-safety-grid {
+      max-width: 1050px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 65px;
+      align-items: center;
+    }
+
+
+    .food-safety-grid img {
+      height: 570px;
+      object-fit: cover;
+    }
+
+
+    .food-safety-text h3 {
+      font-size: 50px;
+      color: var(--coffee-dark);
+      margin-bottom: 24px;
+    }
+
+
+    .food-safety-text p {
+      margin-bottom: 18px;
+    }
+
+
+
+    /* ==============================
+       BEYOND THE LAB
+    ============================== */
+
+    .beyond {
+      background: var(--cream);
+    }
+
+
+    .beyond-grid {
+      max-width: 1050px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 65px;
+
+      align-items: center;
+    }
+
+
+    .beyond-grid img {
+      height: 570px;
+
+      object-fit: cover;
+    }
+
+
+    .beyond-text h3 {
+      font-size: 50px;
+
+      color: var(--coffee-dark);
+
+      margin-bottom: 24px;
+    }
+
+
+    .beyond-text p {
+      margin-bottom: 18px;
+    }
+
+
+
+    /* ==============================
+       FUTURE
+    ============================== */
+
+    .future {
+      background: var(--beige-light);
+
+      text-align: center;
+    }
+
+
+    .future-content {
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+
+    .future-content h2 {
+      font-size: clamp(50px, 7vw, 78px);
+
+      color: var(--coffee-dark);
+
+      line-height: 1;
+
+      margin-bottom: 30px;
+    }
+
+
+    .future-content p {
+      margin-bottom: 20px;
+    }
+
+
+    .future-quote {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(28px, 4vw, 41px);
+
+      color: var(--coffee);
+
+      font-style: italic;
+
+      margin-top: 45px !important;
+    }
+
+
+
+    /* ==============================
+       GALLERY
+    ============================== */
+
+    .gallery-section {
+      background: var(--cream);
+    }
+
+
+    .gallery {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+
+    .gallery img {
+      height: 350px;
+
+      object-fit: cover;
+
+      transition: 0.4s;
+    }
+
+
+    .gallery img:hover {
+      transform: scale(1.015);
+    }
+
+
+
+    /* ==============================
+       GRATITUDE
+    ============================== */
+
+    .gratitude {
+      background: var(--beige);
+
+      text-align: center;
+    }
+
+
+    .gratitude-content {
+      max-width: 820px;
+
+      margin: auto;
+    }
+
+
+    .gratitude-content h2 {
+      font-size: 65px;
+
+      color: var(--coffee-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .gratitude-content p {
+      font-family: 'Cormorant Garamond', serif;
+
       font-size: 25px;
+
       line-height: 1.7;
     }
 
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      max-width: 1000px;
-      margin: auto;
-    }
 
-    .gallery-placeholder {
-      min-height: 280px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #ddd4c4;
-      color: #6d6458;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      text-align: center;
-      padding: 20px;
-    }
 
-    /* RSVP */
+    /* ==============================
+       RSVP
+    ============================== */
+
     .rsvp {
-      background: #111;
+      background: var(--coffee-dark);
+
       color: white;
     }
 
+
+    .rsvp .section-heading h2 {
+      color: white;
+    }
+
+
+    .rsvp .section-heading span {
+      color: #d9c4ae;
+    }
+
+
+    .rsvp .section-heading p {
+      color: #ddd0c3;
+    }
+
+
     form {
-      max-width: 650px;
+      max-width: 680px;
+
       margin: auto;
     }
 
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
+
+      padding: 16px;
+
       margin-bottom: 15px;
-      padding: 15px;
-      border: none;
-      outline: none;
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      background: #f8f2ea;
+
       font-family: 'Montserrat', sans-serif;
+
+      outline: none;
+
+      color: var(--coffee-dark);
     }
 
+
     textarea {
-      height: 130px;
+      height: 140px;
+
       resize: vertical;
     }
 
+
     button {
       width: 100%;
-      padding: 15px;
-      background: #d4af37;
+
+      padding: 16px;
+
       border: none;
-      cursor: pointer;
+
+      background: #c5a384;
+
+      color: var(--coffee-dark);
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
+
       font-weight: 600;
+
+      cursor: pointer;
+
+      transition: 0.3s;
     }
+
 
     button:hover {
-      background: #f0d16c;
+      background: #e0c7ae;
     }
 
-    /* FOOTER */
-    footer {
+
+
+    /* ==============================
+       FINAL SECTION
+    ============================== */
+
+    .final-section {
+      min-height: 70vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
       text-align: center;
-      padding: 45px 20px;
-      background: #050505;
+
       color: white;
+
+      padding: 100px 20px;
+
+      background:
+        linear-gradient(
+          rgba(50, 34, 27, 0.60),
+          rgba(50, 34, 27, 0.75)
+        ),
+        url("images/lab-coat.jpg");
+
+      background-size: cover;
+
+      background-position: center;
     }
+
+
+    .final-content {
+      max-width: 820px;
+    }
+
+
+    .final-content p {
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      font-size: 11px;
+
+      margin-bottom: 22px;
+
+      color: #e8d8c8;
+    }
+
+
+    .final-content h2 {
+      font-size: clamp(48px, 7vw, 80px);
+
+      line-height: 1.05;
+    }
+
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+      background: #2b1d17;
+
+      color: #eadfd4;
+
+      text-align: center;
+
+      padding: 50px 20px;
+    }
+
 
     footer h2 {
-      font-size: 38px;
-      color: #d4af37;
+      font-size: 42px;
+
+      margin-bottom: 7px;
     }
+
 
     footer p {
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-top: 10px;
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
     }
 
-    @media (max-width: 750px) {
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 850px) {
+
       nav {
-        gap: 12px;
         overflow-x: auto;
+
         justify-content: flex-start;
+
+        gap: 18px;
       }
+
 
       nav a {
         white-space: nowrap;
-        font-size: 10px;
       }
+
+
+      .story-grid,
+      .research-grid,
+      .experiment-grid,
+      .food-safety-grid,
+      .beyond-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+
+      .story-image img,
+      .experiment img,
+      .food-safety-grid img,
+      .beyond-grid img {
+        height: 500px;
+      }
+
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+
+
+    @media (max-width: 580px) {
+
+      section {
+        padding: 80px 7%;
+      }
+
+
+      .hero h1 {
+        font-size: 62px;
+      }
+
 
       .gallery {
         grid-template-columns: 1fr;
       }
 
-      .count-box {
-        width: 130px;
+
+      .gallery img {
+        height: 420px;
       }
 
-      .hero h1 {
-        font-size: 70px;
+
+      .research-images {
+        grid-template-columns: 1fr;
       }
+
+
+      .research-images img:first-child {
+        grid-column: auto;
+      }
+
+
+      .research-images img,
+      .research-images img:first-child {
+        height: 370px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- NAVIGATION -->
+
   <nav>
     <a href="#home">Home</a>
-    <a href="#countdown">Countdown</a>
-    <a href="#ceremony">Ceremony</a>
-    <a href="#journey">Journey</a>
+    <a href="#countdown">The Date</a>
+    <a href="#ceremony">The Day</a>
+    <a href="#story">My Story</a>
+    <a href="#research">Research</a>
+    <a href="#beyond">Beyond</a>
     <a href="#gallery">Gallery</a>
     <a href="#rsvp">RSVP</a>
   </nav>
 
+
+
   <!-- HERO -->
+
   <section class="hero" id="home">
+
     <div class="hero-content">
 
-      <p class="small-title">The Graduation Of</p>
-
-      <!-- CHANGE YOUR NAME HERE -->
-      <h1>YOUR NAME</h1>
-
-      <p class="class-year">Class of 2026</p>
-
-      <!-- CHANGE DEGREE -->
-      <p class="degree">MSc Your Degree Programme</p>
-
-      <!-- CHANGE UNIVERSITY -->
-      <p class="university">University of Padova</p>
-
-      <p class="quote">
-        “One chapter closes. Another begins.”
+      <p class="hero-small">
+        The Graduation of
       </p>
 
-      <a href="#ceremony" class="btn">Join the Celebration</a>
+      <h1>
+        Rachel
+      </h1>
+
+      <p class="hero-year">
+        Class of 2026
+      </p>
+
+      <p class="hero-degree">
+        MSc Biotechnologies for Food Science
+      </p>
+
+      <p class="hero-university">
+        UNIVERSITY OF PADOVA · ITALY
+      </p>
+
+      <p class="hero-quote">
+        From curiosity, to discovery, to this moment.
+      </p>
+
+      <a href="#ceremony" class="hero-button">
+        Celebrate With Me
+      </a>
 
     </div>
+
   </section>
 
 
-  <!-- COUNTDOWN -->
+
+  <!-- DATE ANNOUNCEMENT -->
+
   <section class="countdown-section" id="countdown">
 
-    <div class="section-title">
-      <span>The Final Countdown</span>
-      <h2>Until Graduation</h2>
+    <div class="section-heading">
+
+      <span>
+        Almost There
+      </span>
+
+      <h2>
+        The Final Countdown
+      </h2>
+
     </div>
 
-    <div class="countdown">
 
-      <div class="count-box">
-        <span id="days">00</span>
-        <p>Days</p>
-      </div>
+    <div class="date-announcement">
 
-      <div class="count-box">
-        <span id="hours">00</span>
-        <p>Hours</p>
-      </div>
+      <p>
+        Graduation Date
+        <br>
+        To Be Announced
+      </p>
 
-      <div class="count-box">
-        <span id="minutes">00</span>
-        <p>Minutes</p>
-      </div>
-
-      <div class="count-box">
-        <span id="seconds">00</span>
-        <p>Seconds</p>
-      </div>
+      <span>
+        The countdown will begin once the date is confirmed
+      </span>
 
     </div>
 
   </section>
+
 
 
   <!-- CEREMONY -->
-  <section id="ceremony">
 
-    <div class="section-title">
-      <span>Save The Date</span>
-      <h2>The Big Day</h2>
+  <section class="ceremony" id="ceremony">
+
+    <div class="section-heading">
+
+      <span>
+        Save The Date
+      </span>
+
+      <h2>
+        The Big Day
+      </h2>
+
+      <p>
+        A milestone made even more special by the people
+        who have been part of the journey.
+      </p>
+
     </div>
+
 
     <div class="event-card">
 
-      <h3>Graduation Ceremony 🎓</h3>
+      <div class="event-icon">
+        🎓
+      </div>
 
-      <!-- CHANGE THESE -->
-      <p class="gold">00 Month 2026</p>
-      <p>00:00</p>
+      <h3>
+        Graduation Ceremony
+      </h3>
 
-      <br>
+      <p class="event-date">
+        Graduation Date Coming Soon
+      </p>
 
-      <p><strong>University of Padova</strong></p>
-      <p>Padova, Italy</p>
+      <p>
+        Ceremony Time To Be Confirmed
+      </p>
 
       <br>
 
       <p>
-        I would be delighted to have you celebrate this special milestone with me.
+        <strong>
+          University of Padova
+        </strong>
+      </p>
+
+      <p>
+        Padova, Italy
+      </p>
+
+
+      <p class="ceremony-message">
+        I would be delighted to have you celebrate this
+        special chapter with me.
       </p>
 
     </div>
@@ -474,49 +1241,74 @@
   </section>
 
 
-  <!-- JOURNEY -->
-  <section class="journey" id="journey">
 
-    <div class="section-title">
-      <span>More Than A Degree</span>
-      <h2>My Journey</h2>
+  <!-- MY STORY -->
+
+  <section class="story" id="story">
+
+    <div class="section-heading">
+
+      <span>
+        Ghana · Italy · 2026
+      </span>
+
+      <h2>
+        My Story
+      </h2>
+
     </div>
 
-    <div class="timeline">
 
-      <div class="timeline-item">
-        <h3>The Beginning</h3>
-        <p>
-          Every journey begins with a decision to take the first step.
-        </p>
+    <div class="story-grid">
+
+      <div class="story-image">
+
+        <img
+          src="images/campus.jpg"
+          alt="Rachel at the University of Padova"
+        >
+
       </div>
 
-      <div class="timeline-item">
-        <h3>The Journey</h3>
-        <p>
-          Lectures, long nights, challenges, friendships, discoveries and unforgettable memories.
-        </p>
-      </div>
 
-      <div class="timeline-item">
-        <h3>The Thesis</h3>
-        <p>
-          Months of research, perseverance and determination brought me closer to the finish line.
-        </p>
-      </div>
+      <div class="story-text">
 
-      <div class="timeline-item">
-        <h3>The Finish Line</h3>
-        <p>
-          After everything that came before it, the moment has finally arrived.
-        </p>
-      </div>
+        <h3>
+          A journey shaped by curiosity
+        </h3>
 
-      <div class="timeline-item">
-        <h3>Class of 2026 🎓</h3>
         <p>
-          A chapter completed. A new adventure begins.
+          I’m <strong>Rachel Nana Asiedua Yeboah</strong>,
+          a Ghanaian biotechnology researcher with a passion
+          for food science, sustainable agriculture,
+          innovation, and creating opportunities for young people.
         </p>
+
+        <p>
+          My journey has been shaped by curiosity, resilience,
+          and a deep desire to understand how science can be
+          used to solve real-world problems.
+        </p>
+
+        <p>
+          That journey has taken me from Ghana to Italy,
+          where I am completing my
+          <strong>Master’s degree in Biotechnologies for Food Science
+          at the University of Padova.</strong>
+        </p>
+
+        <p class="highlight">
+          This milestone represents far more than a degree.
+          It represents learning, sacrifice, discovery,
+          persistence, growth, and the people who encouraged
+          me along the way.
+        </p>
+
+        <p>
+          Every classroom, experiment, challenge and opportunity
+          has become part of the story that brought me here.
+        </p>
+
       </div>
 
     </div>
@@ -524,25 +1316,362 @@
   </section>
 
 
-  <!-- THANK YOU -->
-  <section>
 
-    <div class="section-title">
-      <span>With Gratitude</span>
-      <h2>A Note From Me</h2>
-    </div>
+  <!-- RESEARCH -->
 
-    <div class="message">
+  <section class="research" id="research">
+
+    <div class="section-heading">
+
+      <span>
+        Curiosity In Action
+      </span>
+
+      <h2>
+        Into the Lab
+      </h2>
 
       <p>
-        This achievement represents more than a degree.
-        It represents every challenge overcome, every lesson learned,
-        and every person who supported me along the way.
-        <br><br>
-        To my family, friends, mentors and everyone who has been part
-        of this journey — thank you.
-        <br><br>
-        I cannot wait to celebrate this moment with you.
+        Somewhere between the questions, experiments,
+        unexpected results and long laboratory days,
+        curiosity became research.
+      </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+      <div class="research-images">
+
+        <img
+          src="images/lab-smile.jpg"
+          alt="Rachel working in the laboratory"
+        >
+
+        <img
+          src="images/lab-work-1.jpg"
+          alt="Rachel carrying out laboratory research"
+        >
+
+        <img
+          src="images/lab-work-2.jpg"
+          alt="Rachel carrying out laboratory experiments"
+        >
+
+      </div>
+
+
+      <div class="research-text">
+
+        <h3>
+          Science with a purpose
+        </h3>
+
+        <p>
+          I have always been interested in how science can
+          improve the way we produce and protect our food.
+        </p>
+
+        <p>
+          That interest led me to explore plant science,
+          food safety, molecular biology and agricultural biotechnology.
+        </p>
+
+
+        <p class="research-name">
+          “How can what we learn in the laboratory
+          make life better beyond it?”
+        </p>
+
+
+        <p>
+          My Master’s research focuses on the
+          <strong>
+          phytotoxicity and biostimulant potential of
+          graphene-based materials in tomato seed priming.
+          </strong>
+        </p>
+
+        <p>
+          I study how
+          <strong>Graphene Acetic Acid</strong> and
+          <strong>Nitrogen-Doped Graphene</strong>
+          influence the early growth and development
+          of tomato plants.
+        </p>
+
+        <p>
+          Behind every seedling, measurement and dataset
+          lies a much bigger question:
+          could new approaches to seed treatment contribute
+          to more sustainable and effective ways of producing
+          food in the future?
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- THESIS / EXPERIMENT -->
+
+  <section class="experiment">
+
+    <div class="experiment-grid">
+
+      <div>
+
+        <img
+          src="images/research.jpg"
+          alt="Tomato seedling research"
+        >
+
+      </div>
+
+
+      <div>
+
+        <p class="experiment-label">
+          Behind the Thesis
+        </p>
+
+        <h3>
+          From experiment to evidence
+        </h3>
+
+        <p>
+          Research has taught me that science is rarely
+          a straight path.
+        </p>
+
+        <p>
+          It requires patience, attention to detail,
+          good questions, careful work with data,
+          and the willingness to learn from results
+          that do not always turn out as expected.
+        </p>
+
+        <p>
+          Some of the most valuable lessons have come
+          not only from the experiments that worked,
+          but also from the moments that required me
+          to stop, rethink, learn and try again.
+        </p>
+
+        <p>
+          Every small step eventually became part of
+          something much bigger:
+          a thesis, a degree, and a deeper understanding
+          of the kind of scientist I hope to become.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOD SAFETY EXPERIENCE -->
+
+  <section class="food-safety">
+
+    <div class="section-heading">
+
+      <span>
+        Another Side of Food Science
+      </span>
+
+      <h2>
+        Protecting What We Eat
+      </h2>
+
+    </div>
+
+
+    <div class="food-safety-grid">
+
+      <div class="food-safety-text">
+
+        <h3>
+          From production to protection
+        </h3>
+
+        <p>
+          My journey in biotechnology has also given me
+          practical experience in food safety and molecular
+          biotechnology.
+        </p>
+
+        <p>
+          During my internship at the
+          <strong>
+            Istituto Zooprofilattico Sperimentale delle Venezie,
+          </strong>
+          I gained experience with techniques used for the
+          molecular detection and characterization of foodborne
+          pathogens, GMO detection, and food safety surveillance.
+        </p>
+
+        <p>
+          These experiences helped me appreciate food science
+          from two important perspectives:
+          how we produce food, and how we make sure the food
+          reaching people is safe.
+        </p>
+
+        <p class="highlight">
+          Producing enough food matters.
+          Protecting the quality and safety of that food matters too.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <img
+          src="images/lab-coat.jpg"
+          alt="Rachel in her laboratory coat"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- BEYOND THE LAB -->
+
+  <section class="beyond" id="beyond">
+
+    <div class="section-heading">
+
+      <span>
+        More Than Science
+      </span>
+
+      <h2>
+        Beyond the Lab
+      </h2>
+
+    </div>
+
+
+    <div class="beyond-grid">
+
+      <div>
+
+        <img
+          src="images/classroom.jpg"
+          alt="Rachel during her university journey"
+        >
+
+      </div>
+
+
+      <div class="beyond-text">
+
+        <h3>
+          Learning, leading and serving
+        </h3>
+
+        <p>
+          Science is an important part of my life,
+          but it is not the only way I hope to make an impact.
+        </p>
+
+        <p>
+          I am also passionate about young people,
+          leadership, service and creating opportunities for others.
+        </p>
+
+        <p>
+          As <strong>Head of Volunteering at YouthsMAP</strong>,
+          I contribute to initiatives that support and empower
+          marginalized youth in the United States and
+          Sub-Saharan Africa.
+        </p>
+
+        <p>
+          This work has taught me that making a difference
+          does not always begin with something extraordinary.
+          Sometimes it starts by sharing knowledge,
+          creating an opportunity, offering encouragement,
+          or helping someone recognize that they are capable
+          of more than they imagined.
+        </p>
+
+        <p class="highlight">
+          Science and youth development may seem like
+          different worlds, but for me they are connected
+          by the same purpose:
+          using what I have learned to help create something better.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FUTURE -->
+
+  <section class="future">
+
+    <div class="future-content">
+
+      <p class="hero-small"
+         style="color:#7a5b49;">
+        What Comes Next
+      </p>
+
+      <h2>
+        The journey continues.
+      </h2>
+
+      <p>
+        As I reach this milestone, I am proud of how far
+        I have come, but I am equally excited about
+        everything that still lies ahead.
+      </p>
+
+      <p>
+        I hope to build a career in research and innovation
+        at the intersection of
+        <strong>
+          biotechnology, food science and sustainable agriculture,
+        </strong>
+        contributing to work that addresses real challenges
+        and has meaning beyond the laboratory.
+      </p>
+
+      <p>
+        I am especially interested in how science and technology
+        can contribute to food systems that are safer,
+        more sustainable and more resilient.
+      </p>
+
+      <p>
+        And somewhere along the way, I hope my own journey
+        can encourage another young person to remain curious,
+        keep learning, and take opportunities when they come.
+      </p>
+
+
+      <p class="future-quote">
+        “I am still learning. Still growing.
+        Still dreaming. And this is only the beginning.”
       </p>
 
     </div>
@@ -550,52 +1679,120 @@
   </section>
 
 
-  <!-- GALLERY -->
-  <section class="journey" id="gallery">
 
-    <div class="section-title">
-      <span>Memories</span>
-      <h2>The Journey in Pictures</h2>
+  <!-- PHOTO GALLERY -->
+
+  <section class="gallery-section" id="gallery">
+
+    <div class="section-heading">
+
+      <span>
+        The Road Here
+      </span>
+
+      <h2>
+        Moments Along the Way
+      </h2>
+
+      <p>
+        Before the graduation photos come the memories
+        that made graduation possible.
+      </p>
+
     </div>
+
 
     <div class="gallery">
 
-      <div class="gallery-placeholder">
-        Graduation Photo
-      </div>
+      <img
+        src="images/lab-coat.jpg"
+        alt="Rachel in her laboratory coat"
+      >
 
-      <div class="gallery-placeholder">
-        University Memory
-      </div>
+      <img
+        src="images/lab-work-3.jpg"
+        alt="Rachel carrying out laboratory work"
+      >
 
-      <div class="gallery-placeholder">
-        Thesis Journey
-      </div>
+      <img
+        src="images/campus.jpg"
+        alt="Rachel at the University of Padova"
+      >
 
-      <div class="gallery-placeholder">
-        Friends & Family
-      </div>
+      <img
+        src="images/lab-work-4.jpg"
+        alt="Rachel during her research journey"
+      >
 
-      <div class="gallery-placeholder">
-        Graduation Portrait
-      </div>
+      <img
+        src="images/classroom.jpg"
+        alt="Rachel during her university journey"
+      >
 
-      <div class="gallery-placeholder">
-        Celebration
-      </div>
+      <img
+        src="images/lab-smile.jpg"
+        alt="Rachel conducting laboratory work"
+      >
 
     </div>
 
   </section>
 
 
+
+  <!-- GRATITUDE -->
+
+  <section class="gratitude">
+
+    <div class="gratitude-content">
+
+      <h2>
+        With Gratitude
+      </h2>
+
+      <p>
+        This achievement carries the fingerprints
+        of so many people.
+        <br><br>
+
+        To my family, friends, mentors, lecturers,
+        colleagues and everyone who encouraged me,
+        supported me, prayed for me, challenged me
+        and believed in the journey:
+        <strong>thank you.</strong>
+        <br><br>
+
+        This celebration is mine,
+        but this moment belongs to all of us.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
   <!-- RSVP -->
+
   <section class="rsvp" id="rsvp">
 
-    <div class="section-title">
-      <span>Celebrate With Me</span>
-      <h2>RSVP</h2>
+    <div class="section-heading">
+
+      <span>
+        Join the Celebration
+      </span>
+
+      <h2>
+        RSVP
+      </h2>
+
+      <p>
+        I would love to know if you will be there
+        to celebrate this milestone with me.
+      </p>
+
     </div>
+
 
     <form onsubmit="submitRSVP(event)">
 
@@ -605,11 +1802,23 @@
         required
       >
 
+
       <select required>
-        <option value="">Will you be attending?</option>
-        <option>Absolutely! 🎓</option>
-        <option>Sadly, I can't make it</option>
+
+        <option value="">
+          Will you be attending?
+        </option>
+
+        <option>
+          Absolutely! 🎓
+        </option>
+
+        <option>
+          Sadly, I won't be able to make it
+        </option>
+
       </select>
+
 
       <input
         type="number"
@@ -617,9 +1826,11 @@
         placeholder="Number of Guests"
       >
 
+
       <textarea
-        placeholder="Leave a message for the graduate..."
+        placeholder="Leave a message for Rachel..."
       ></textarea>
+
 
       <button type="submit">
         Send RSVP
@@ -630,98 +1841,61 @@
   </section>
 
 
+
+  <!-- FINAL STATEMENT -->
+
+  <section class="final-section">
+
+    <div class="final-content">
+
+      <p>
+        Class of 2026
+      </p>
+
+      <h2>
+        One chapter closes.
+        <br>
+        Another begins.
+      </h2>
+
+    </div>
+
+  </section>
+
+
+
   <!-- FOOTER -->
+
   <footer>
 
-    <!-- CHANGE YOUR NAME -->
-    <h2>YOUR NAME</h2>
+    <h2>
+      Rachel Nana Asiedua Yeboah
+    </h2>
 
-    <p>CLASS OF 2026 • UNIVERSITY OF PADOVA</p>
+    <p>
+      MSc Biotechnologies for Food Science · University of Padova · 2026
+    </p>
 
   </footer>
 
 
+
+  <!-- JAVASCRIPT -->
+
   <script>
-
-    /*
-    ======================================
-    CHANGE YOUR GRADUATION DATE HERE
-    ======================================
-
-    Format:
-
-    YEAR-MONTH-DAYTHOUR:MINUTE:SECOND
-
-    Example:
-    2026-10-20T10:00:00
-    */
-
-    const graduationDate = new Date(
-      "2026-12-31T10:00:00"
-    ).getTime();
-
-
-    const countdown = setInterval(function() {
-
-      const now = new Date().getTime();
-
-      const distance =
-        graduationDate - now;
-
-      if (distance < 0) {
-
-        clearInterval(countdown);
-
-        document.getElementById("days").innerHTML = "🎓";
-        document.getElementById("hours").innerHTML = "🎉";
-        document.getElementById("minutes").innerHTML = "✨";
-        document.getElementById("seconds").innerHTML = "🥂";
-
-        return;
-      }
-
-
-      const days =
-        Math.floor(distance / (1000 * 60 * 60 * 24));
-
-      const hours =
-        Math.floor(
-          (distance % (1000 * 60 * 60 * 24))
-          / (1000 * 60 * 60)
-        );
-
-      const minutes =
-        Math.floor(
-          (distance % (1000 * 60 * 60))
-          / (1000 * 60)
-        );
-
-      const seconds =
-        Math.floor(
-          (distance % (1000 * 60))
-          / 1000
-        );
-
-
-      document.getElementById("days").innerHTML = days;
-      document.getElementById("hours").innerHTML = hours;
-      document.getElementById("minutes").innerHTML = minutes;
-      document.getElementById("seconds").innerHTML = seconds;
-
-    }, 1000);
-
 
     function submitRSVP(event) {
 
       event.preventDefault();
 
       alert(
-        "Thank you! 🎓 Your RSVP form is working. We will connect it to a real response system later."
+        "Thank you! 🎓 The RSVP section is ready. We will connect it to a real response system before invitations are sent."
       );
 
     }
 
   </script>
+
 
 </body>
 </html>
