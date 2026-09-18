@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A thank-you message from Rachel Nana Asiedua Yeboah and an invitation to her graduation after party in Padova on 27 September 2026."
+  >
+
+  <meta name="theme-color" content="#3b2a22">
+
+  <meta property="og:title" content="Rachel's Graduation After Party | 27 September 2026">
+
+  <meta
+    property="og:description"
+    content="Thank you for celebrating with me. Join me for one more celebration in Padova on Sunday, 27 September 2026 at 3:00 PM."
+  >
+
+  <meta
+    property="og:image"
+    content="https://kyerehernest9.github.io/graduation-2026/images/after-party-group.jpg"
+  >
+
+  <meta
+    property="og:url"
+    content="https://kyerehernest9.github.io/graduation-2026/after-party.html"
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>Thank You & After Party | Rachel '26</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --coffee-deep: #2d1f19;
+      --coffee-dark: #3b2a22;
+      --coffee: #5b4135;
+      --coffee-light: #80614e;
+      --caramel: #b99778;
+      --sand: #d8c3aa;
+      --beige: #e9ddce;
+      --beige-light: #f4ede4;
+      --cream: #fbf8f3;
+      --text: #40362f;
+      --muted: #776b63;
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(59, 42, 34, 0.10);
+      --transition: 0.35s ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    section {
+      position: relative;
+      padding: 110px 8%;
+      scroll-margin-top: 75px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(45, 31, 25, 0.94);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      width: min(1200px, 92%);
+      min-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      color: var(--beige-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #eee1d4;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--sand);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-button span {
+      display: block;
+      width: 25px;
+      height: 1px;
+      margin: 6px auto;
+      background: var(--beige-light);
+    }
+
+    .party-hero {
+      min-height: 100vh;
+      padding: 125px 7% 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      background:
+        linear-gradient(
+          rgba(43, 29, 23, 0.58),
+          rgba(43, 29, 23, 0.84)
+        ),
+        url("images/after-party-group.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-content {
+      max-width: 920px;
+    }
+
+    .eyebrow {
+      margin-bottom: 22px;
+      color: #eadaca;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+    }
+
+    .party-hero h1 {
+      margin-bottom: 26px;
+      font-size: clamp(70px, 11vw, 140px);
+      font-weight: 500;
+      letter-spacing: -2px;
+      line-height: 0.88;
+    }
+
+    .hero-subtitle {
+      max-width: 690px;
+      margin: 0 auto 34px;
+      color: #f0e4d9;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 3vw, 32px);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .hero-date {
+      margin-bottom: 34px;
+      color: #e2c7ad;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .primary-button {
+      display: inline-block;
+      padding: 15px 31px;
+      color: var(--white);
+      border: 1px solid rgba(239, 218, 198, 0.80);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .primary-button:hover {
+      background: var(--beige-light);
+      color: var(--coffee-dark);
+      border-color: var(--beige-light);
+    }
+
+    .gratitude {
+      background: var(--beige);
+      text-align: center;
+    }
+
+    .gratitude-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .section-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--coffee-light);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .gratitude h2 {
+      margin-bottom: 28px;
+      color: var(--coffee-dark);
+      font-size: clamp(50px, 7vw, 72px);
+    }
+
+    .gratitude p {
+      color: var(--coffee);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3vw, 29px);
+      line-height: 1.65;
+    }
+
+    .memories {
+      background: var(--cream);
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      color: var(--coffee-dark);
+      font-size: clamp(48px, 6vw, 72px);
+    }
+
+    .section-heading p {
+      max-width: 640px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .memory-grid {
+      width: min(1150px, 100%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .memory-frame {
+      overflow: hidden;
+      background: var(--beige);
+      box-shadow: var(--shadow);
+    }
+
+    .memory-frame img {
+      height: 760px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .memory-copy h3 {
+      margin-bottom: 24px;
+      color: var(--coffee-dark);
+      font-size: clamp(38px, 5vw, 52px);
+    }
+
+    .memory-copy p {
+      margin-bottom: 18px;
+      font-size: 14.5px;
+    }
+
+    .memory-quote {
+      margin: 30px 0;
+      padding-left: 23px;
+      border-left: 2px solid var(--caramel);
+      color: var(--coffee-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(23px, 3vw, 28px);
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    .party-details {
+      background: var(--beige-light);
+    }
+
+    .event-card {
+      position: relative;
+      max-width: 850px;
+      margin: auto;
+      padding: 70px 50px;
+      background: var(--cream);
+      border: 1px solid #dfd0c0;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .event-card::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      pointer-events: none;
+      border: 1px solid rgba(128, 97, 78, 0.18);
+    }
+
+    .event-icon {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .event-card h3 {
+      margin-bottom: 24px;
+      color: var(--coffee-dark);
+      font-size: clamp(38px, 5vw, 52px);
+    }
+
+    .event-date {
+      color: var(--coffee-light);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .event-time {
+      margin: 15px 0 27px;
+      color: var(--coffee-dark);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 41px;
+      font-weight: 600;
+    }
+
+    .venue {
+      max-width: 620px;
+      margin: auto;
+      padding-top: 28px;
+      border-top: 1px solid #dfd3c7;
+    }
+
+    .venue strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--coffee-dark);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+    }
+
+    .venue p {
+      font-size: 14px;
+    }
+
+    .event-message {
+      max-width: 590px;
+      margin: 31px auto 0;
+      color: var(--coffee-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .card-actions {
+      position: relative;
+      z-index: 2;
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .light-button,
+    .outline-button {
+      display: inline-block;
+      padding: 14px 25px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .light-button {
+      background: var(--coffee-dark);
+      color: var(--white);
+      border: 1px solid var(--coffee-dark);
+    }
+
+    .light-button:hover {
+      background: var(--coffee);
+      border-color: var(--coffee);
+    }
+
+    .outline-button {
+      color: var(--coffee-dark);
+      border: 1px solid var(--coffee-light);
+    }
+
+    .outline-button:hover {
+      background: var(--beige);
+    }
+
+    .countdown-section {
+      background: var(--coffee-deep);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .countdown-section .section-label {
+      color: #d6baa1;
+    }
+
+    .countdown-section h2 {
+      color: var(--white);
+      font-size: clamp(48px, 6vw, 72px);
+    }
+
+    .countdown-date {
+      margin: 18px 0 38px;
+      color: #ddc4ad;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(21px, 3vw, 28px);
+    }
+
+    .countdown {
+      max-width: 780px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .count-box {
+      padding: 28px 12px 25px;
+      border: 1px solid rgba(235, 218, 202, 0.22);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .count-box strong {
+      display: block;
+      color: #dfc3aa;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6vw, 62px);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .count-box span {
+      display: block;
+      margin-top: 13px;
+      color: #eee1d5;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .countdown-message {
+      margin-top: 30px;
+      color: #d9c0a8;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 23px;
+      font-style: italic;
+    }
+
+    .rsvp {
+      background: var(--coffee-deep);
+      color: var(--white);
+    }
+
+    .rsvp .section-label {
+      color: #d0b299;
+    }
+
+    .rsvp .section-heading h2 {
+      color: var(--white);
+    }
+
+    .rsvp .section-heading p {
+      color: #d8c9bd;
+    }
+
+    .rsvp-form {
+      width: min(720px, 100%);
+      margin: auto;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ddc9b8;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid rgba(234, 216, 199, 0.28);
+      border-radius: 0;
+      outline: none;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+    }
+
+    .rsvp-form input::placeholder,
+    .rsvp-form textarea::placeholder {
+      color: #bba99b;
+    }
+
+    .rsvp-form select {
+      color: #eee1d5;
+    }
+
+    .rsvp-form select option {
+      color: var(--coffee-dark);
+      background: var(--cream);
+    }
+
+    .rsvp-form input:focus,
+    .rsvp-form select:focus,
+    .rsvp-form textarea:focus {
+      border-color: #c9a889;
+      background: rgba(255, 255, 255, 0.075);
+    }
+
+    .rsvp-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .rsvp-button {
+      width: 100%;
+      padding: 17px 24px;
+      margin-top: 5px;
+      border: 1px solid #c7a587;
+      background: #c7a587;
+      color: var(--coffee-deep);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .rsvp-button:hover {
+      background: #dec2a9;
+      border-color: #dec2a9;
+    }
+
+    .rsvp-button:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    .rsvp-status {
+      min-height: 30px;
+      margin-top: 21px;
+      text-align: center;
+      color: #d7c1ae;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 21px;
+      font-style: italic;
+    }
+
+    .rsvp-status.success {
+      color: #ead8c7;
+    }
+
+    .rsvp-status.error {
+      color: #f0c7bd;
+    }
+
+    .rsvp-note {
+      margin-top: 16px;
+      color: #a99585;
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+
+    .closing {
+      min-height: 70vh;
+      padding: 90px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      background:
+        linear-gradient(
+          rgba(45, 31, 25, 0.62),
+          rgba(45, 31, 25, 0.82)
+        ),
+        url("images/after-party-bouquet.jpg");
+      background-size: cover;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+    }
+
+    .closing-content {
+      max-width: 840px;
+    }
+
+    .closing-date {
+      margin-bottom: 23px;
+      color: #e1cab4;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .closing h2 {
+      margin-bottom: 28px;
+      font-size: clamp(50px, 7vw, 82px);
+      font-weight: 500;
+    }
+
+    .closing p:last-of-type {
+      max-width: 650px;
+      margin: 0 auto 34px;
+      color: #eee1d5;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 52px 20px;
+      background: #211611;
+      color: #e5d8cd;
+      text-align: center;
+    }
+
+    footer h2 {
+      margin-bottom: 8px;
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 500;
+    }
+
+    footer p {
+      color: #bda999;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      section {
+        padding: 90px 7%;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 35px 7% 45px;
+        background: rgba(45, 31, 25, 0.985);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: var(--transition);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .memory-frame img {
+        height: 620px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 78px 6%;
+      }
+
+      .nav-inner {
+        width: 88%;
+      }
+
+      .nav-brand {
+        font-size: 23px;
+      }
+
+      .party-hero {
+        min-height: 100svh;
+        padding: 115px 7% 65px;
+        background-position: center center;
+      }
+
+      .party-hero h1 {
+        font-size: clamp(64px, 21vw, 92px);
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 5px;
+      }
+
+      .hero-date {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+        line-height: 1.7;
+      }
+
+      .event-card {
+        padding: 55px 25px;
+      }
+
+      .memory-frame img {
+        height: 430px;
+      }
+
+      .countdown {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .count-box {
+        padding: 24px 8px 22px;
+      }
+
+      .card-actions {
+        flex-direction: column;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .light-button,
+      .outline-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+
+      <a
+        href="index.html"
+        class="nav-brand"
+      >
+        Rachel '26
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="After party navigation"
+      >
+        <a href="index.html">
+          Graduation
+        </a>
+
+        <a href="#thank-you">
+          Thank You
+        </a>
+
+        <a href="#memories">
+          Memories
+        </a>
+
+        <a href="#party">
+          Party Details
+        </a>
+
+        <a href="#countdown">
+          Countdown
+        </a>
+
+        <a href="#rsvp">
+          RSVP
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section
+      class="party-hero"
+      id="home"
+    >
+      <div class="hero-content reveal">
+
+        <p class="eyebrow">
+          One More Celebration
+        </p>
+
+        <h1>
+          Thank You
+        </h1>
+
+        <p class="hero-subtitle">
+          Graduation day was beautiful because I got to share it
+          with people who have been part of the journey.
+          Now, I would love to celebrate with you once more.
+        </p>
+
+        <p class="hero-date">
+          Sunday · 27 September 2026 · 3:00 PM
+        </p>
+
+        <a
+          href="#party"
+          class="primary-button"
+        >
+          Join the Celebration
+        </a>
+
+      </div>
+    </section>
+
+
+    <section
+      class="gratitude"
+      id="thank-you"
+    >
+      <div class="gratitude-content reveal">
+
+        <span class="section-label">
+          With a Grateful Heart
+        </span>
+
+        <h2>
+          Thank you for being part of this moment.
+        </h2>
+
+        <p>
+          To everyone who celebrated with me, sent a message,
+          called, prayed, encouraged me, gave a gift, travelled,
+          or simply shared in my happiness:
+          <strong>thank you.</strong>
+          <br><br>
+          This degree represents years of learning, sacrifice,
+          growth, and perseverance, but it also carries the love
+          and support of so many wonderful people.
+          <br><br>
+          I am deeply grateful that I did not have to celebrate
+          this milestone alone.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section
+      class="memories"
+      id="memories"
+    >
+      <div class="section-heading reveal">
+
+        <span class="section-label">
+          A Few Moments from the Day
+        </span>
+
+        <h2>
+          Memories Worth Holding On To
+        </h2>
+
+        <p>
+          From the final presentation to the flowers, laurel crown,
+          and diploma envelope, these moments made the day unforgettable.
+        </p>
+
+      </div>
+
+      <div class="memory-grid">
+
+        <div class="memory-frame reveal">
+          <img
+            src="images/after-party-bouquet.jpg"
+            alt="Rachel holding flowers and her graduation diploma envelope"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="memory-copy reveal">
+          <h3>
+            A beautiful ending,
+            and a joyful beginning.
+          </h3>
+
+          <p>
+            This moment captured the feeling of the day:
+            gratitude, relief, joy, and the quiet excitement
+            of completing one journey while stepping into another.
+          </p>
+
+          <p>
+            Every hug, every smile, every photograph,
+            and every encouraging word helped make the celebration
+            even more meaningful.
+          </p>
+
+          <p class="memory-quote">
+            “Some memories deserve one more celebration.”
+          </p>
+
+          <p>
+            That is exactly why I would love to gather once more
+            with the people who made this milestone so special.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section
+      class="party-details"
+      id="party"
+    >
+      <div class="section-heading reveal">
+
+        <span class="section-label">
+          The Celebration Continues
+        </span>
+
+        <h2>
+          Graduation After Party
+        </h2>
+
+        <p>
+          Come for an afternoon of good food, laughter,
+          pictures, music, and one more chance to celebrate together.
+        </p>
+
+      </div>
+
+      <div class="event-card reveal">
+
+        <div
+          class="event-icon"
+          aria-hidden="true"
+        >
+          🥂
+        </div>
+
+        <h3>
+          You're Invited
+        </h3>
+
+        <p class="event-date">
+          Sunday · 27 September 2026
+        </p>
+
+        <p class="event-time">
+          3:00 PM
+        </p>
+
+        <div class="venue">
+
+          <strong>
+            Via Enrico Bernardi, 20E
+          </strong>
+
+          <p>
+            35135 Padova (PD), Italy
+          </p>
+
+        </div>
+
+        <p class="event-message">
+          The graduation ceremony may be over,
+          but the joy is worth celebrating a little longer.
+          I would be so happy to have you there.
+        </p>
+
+        <div class="card-actions">
+
+          <a
+            class="light-button"
+            href="https://www.google.com/maps/search/?api=1&query=Via+Enrico+Bernardi+20E%2C+35135+Padova+PD%2C+Italy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in Maps
+          </a>
+
+          <a
+            class="outline-button"
+            href="index.html"
+          >
+            Back to Graduation Page
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section
+      class="countdown-section"
+      id="countdown"
+    >
+      <div class="reveal">
+
+        <span class="section-label">
+          See You Soon
+        </span>
+
+        <h2>
+          Counting Down to the Party
+        </h2>
+
+        <p class="countdown-date">
+          Sunday, 27 September 2026 · 3:00 PM
+        </p>
+
+        <div class="countdown">
+
+          <div class="count-box">
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+
+          <div class="count-box">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+
+          <div class="count-box">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+
+          <div class="count-box">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+        <p
+          class="countdown-message"
+          id="countdownMessage"
+        >
+          Until we celebrate again
+        </p>
+
+      </div>
+    </section>
+
+
+    <section
+      class="rsvp"
+      id="rsvp"
+    >
+      <div class="section-heading reveal">
+
+        <span class="section-label">
+          Let Me Know
+        </span>
+
+        <h2>
+          RSVP for the After Party
+        </h2>
+
+        <p>
+          I would love to celebrate with you.
+          Please let me know if you will be joining us
+          on Sunday, 27 September.
+        </p>
+
+      </div>
+
+
+      <form
+        class="rsvp-form reveal"
+        id="rsvpForm"
+      >
+
+        <div class="form-grid">
+
+          <div class="form-group">
+
+            <label for="guestName">
+              Your Name
+            </label>
+
+            <input
+              type="text"
+              id="guestName"
+              name="name"
+              placeholder="Enter your name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="attendance">
+              Will You Attend?
+            </label>
+
+            <select
+              id="attendance"
+              name="attendance"
+              required
+            >
+
+              <option value="">
+                Select an option
+              </option>
+
+              <option value="After Party - Attending">
+                Yes, I will be there 🥂
+              </option>
+
+              <option value="After Party - Not attending">
+                Sadly, I cannot make it
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="guests">
+              Number of Guests
+            </label>
+
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="0"
+              max="20"
+              placeholder="1"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="contact">
+              Email or Phone
+            </label>
+
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              placeholder="Optional"
+            >
+
+          </div>
+
+
+          <div class="form-group full">
+
+            <label for="message">
+              A Message for Rachel
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Leave a message..."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="rsvp-button"
+          id="submitButton"
+        >
+          Send After Party RSVP
+        </button>
+
+
+        <p
+          class="rsvp-status"
+          id="rsvpStatus"
+          aria-live="polite"
+        ></p>
+
+
+        <p class="rsvp-note">
+          Your response will be added to Rachel's
+          graduation guest list.
+        </p>
+
+      </form>
+
+    </section>
+
+
+    <section class="closing">
+      <div class="closing-content reveal">
+
+        <p class="closing-date">
+          Rachel '26 · Padova
+        </p>
+
+        <h2>
+          One milestone.
+          <br>
+          So much to celebrate.
+        </h2>
+
+        <p>
+          Come ready to eat, laugh, take pictures,
+          make memories, and celebrate together.
+          I can't wait to see you there.
+        </p>
+
+        <a
+          href="index.html"
+          class="primary-button"
+        >
+          Visit My Graduation Story
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <h2>
+      Rachel Nana Asiedua Yeboah
+    </h2>
+
+    <p>
+      MSc Biotechnologies for Food Science
+      · University of Padova · 2026
+    </p>
+
+  </footer>
+
+
+  <script>
+    const partyDate =
+      new Date(
+        "2026-09-27T15:00:00+02:00"
+      ).getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const distance =
+        partyDate - now;
+
+      const daysElement =
+        document.getElementById("days");
+
+      const hoursElement =
+        document.getElementById("hours");
+
+      const minutesElement =
+        document.getElementById("minutes");
+
+      const secondsElement =
+        document.getElementById("seconds");
+
+      const messageElement =
+        document.getElementById("countdownMessage");
+
+
+      if (distance <= 0) {
+
+        daysElement.textContent = "00";
+        hoursElement.textContent = "00";
+        minutesElement.textContent = "00";
+        secondsElement.textContent = "00";
+
+        messageElement.textContent =
+          "The celebration is here — see you at the party!";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60 * 24)
+        );
+
+      const hours =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60 * 24)
+          ) /
+          (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60)
+          ) /
+          (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60)
+          ) /
+          1000
+        );
+
+
+      daysElement.textContent =
+        String(days).padStart(2, "0");
+
+      hoursElement.textContent =
+        String(hours).padStart(2, "0");
+
+      minutesElement.textContent =
+        String(minutes).padStart(2, "0");
+
+      secondsElement.textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    /* =====================================================
+       AFTER PARTY RSVP -> GOOGLE SHEETS
+    ===================================================== */
+
+    const RSVP_ENDPOINT =
+      "https://script.google.com/macros/s/AKfycbysyFT80OEQGg3qy0kmxDlLkLnx_N6xpg7Q4-kEg6S9sramndT3zS1meddCo0NStb9exg/exec";
+
+
+    const rsvpForm =
+      document.getElementById(
+        "rsvpForm"
+      );
+
+    const attendance =
+      document.getElementById(
+        "attendance"
+      );
+
+    const guests =
+      document.getElementById(
+        "guests"
+      );
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+    const rsvpStatus =
+      document.getElementById(
+        "rsvpStatus"
+      );
+
+
+    attendance.addEventListener(
+      "change",
+      function () {
+
+        if (
+          attendance.value ===
+          "After Party - Not attending"
+        ) {
+
+          guests.value = "0";
+          guests.readOnly = true;
+
+        } else {
+
+          guests.readOnly = false;
+
+          if (
+            attendance.value ===
+            "After Party - Attending" &&
+            (
+              guests.value === "" ||
+              guests.value === "0"
+            )
+          ) {
+
+            guests.value = "1";
+
+          }
+
+        }
+
+      }
+    );
+
+
+    rsvpForm.addEventListener(
+      "submit",
+      async function (event) {
+
+        event.preventDefault();
+
+
+        if (
+          attendance.value ===
+          "After Party - Attending" &&
+          guests.value === ""
+        ) {
+
+          guests.value = "1";
+
+        }
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+          "Sending...";
+
+
+        rsvpStatus.className =
+          "rsvp-status";
+
+        rsvpStatus.textContent =
+          "Sending your after party RSVP...";
+
+
+        try {
+
+          const formData =
+            new FormData(rsvpForm);
+
+          const data =
+            new URLSearchParams();
+
+
+          formData.forEach(
+            function (value, key) {
+
+              data.append(
+                key,
+                value
+              );
+
+            }
+          );
+
+
+          await fetch(
+            RSVP_ENDPOINT,
+            {
+              method: "POST",
+              body: data,
+              mode: "no-cors"
+            }
+          );
+
+
+          rsvpStatus.className =
+            "rsvp-status success";
+
+          rsvpStatus.textContent =
+            "RSVP received 🤎 Thank you. I can't wait to celebrate with you!";
+
+
+          rsvpForm.reset();
+
+          guests.readOnly = false;
+
+          submitButton.textContent =
+            "Send After Party RSVP";
+
+          submitButton.disabled = false;
+
+
+        } catch (error) {
+
+          rsvpStatus.className =
+            "rsvp-status error";
+
+          rsvpStatus.textContent =
+            "Something went wrong. Please try again.";
+
+          submitButton.textContent =
+            "Send After Party RSVP";
+
+          submitButton.disabled = false;
+
+        }
+
+      }
+    );
+
+
+    const menuButton =
+      document.getElementById(
+        "menuButton"
+      );
+
+    const navLinks =
+      document.getElementById(
+        "navLinks"
+      );
+
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        const isOpen =
+          navLinks.classList.toggle(
+            "open"
+          );
+
+        document.body.classList.toggle(
+          "menu-open",
+          isOpen
+        );
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navLinks.classList.remove(
+              "open"
+            );
+
+            document.body.classList.remove(
+              "menu-open"
+            );
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      });
+
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+
+          function (entries) {
+
+            entries.forEach(
+              function (entry) {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList.add(
+                      "visible"
+                    );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold: 0.12
+          }
+
+        );
+
+
+      revealElements.forEach(
+        function (element) {
+
+          observer.observe(
+            element
+          );
+
+        }
+      );
+
+    } else {
+
+      revealElements.forEach(
+        function (element) {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+  </script>
+
+</body>
+</html>
